@@ -4,6 +4,7 @@ from steembase import operations
 
 from .utils import get_steem_client
 from .constants import MAGICDICE_ACCOUNT
+from .api_client import ApiClient
 
 
 class Magicdice:
@@ -12,6 +13,7 @@ class Magicdice:
 
     def __init__(self, account, active_key):
         self.steem = get_steem_client([active_key,])
+        self.api_client = ApiClient()
         self.account = account
         self.active_key = active_key
 
@@ -47,3 +49,6 @@ class Magicdice:
         tb.sign()
         response = self.steem.broadcast_transaction_synchronous(tb.json())
         return response.get("id"), response.get("block_num")
+
+    def verify(self, transaction_id):
+        pass
