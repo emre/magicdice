@@ -1,0 +1,1 @@
+MAGICDICE_ACCOUNT = "magicdice"
