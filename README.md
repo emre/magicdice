@@ -122,3 +122,4 @@ for i in range(0, 10):
 
 # Disclaimer
 
+This library may contain unexpected bugs. Audit the code and use it at your own risk.
